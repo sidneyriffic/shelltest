@@ -15,6 +15,6 @@ something like the list below.
 1) single commands and builtins
 2) commands/builtins with arguments and options
 3) ;
-4) #
+4) \#
 5) " and ' not intermixed
 6) 2, 3, 4 and 5 combined

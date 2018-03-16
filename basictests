@@ -2,3 +2,5 @@
 /bin/ls -la
 /bin/pwd
 /bin/ls -l -a -t
+/bin/ls ; /bin/ls -l
+/bin/ls # /bin/ls -l

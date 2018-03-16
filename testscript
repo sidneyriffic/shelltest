@@ -1,0 +1,4 @@
+#!/bin/bash
+$1 basictests # > comp1
+#bash basictests > comp2
+#diff comp1 comp2

@@ -1,2 +1,26 @@
 #!/bin/bash
-cat basictests | $1
+source config
+
+if [ $BASICCMDS -eq 1 ]; then
+    for file in ./basiccmds/*
+    do
+	echo $file
+	/bin/cat $file | $TESTSHELL > comp1 2>&1
+	if [ $COMPARE -eq 1 ]; then
+	    /bin/cat $file | $COMPSHELL > comp2 2>&1
+	    /usr/bin/diff comp1 comp2
+	fi
+    done
+fi
+
+if [ $ARGCMDS -eq 1 ]; then
+    for file in ./argcmds/*
+    do
+	echo $file
+	/bin/cat $file | $TESTSHELL > comp1 2>&1
+	if [ $COMPARE -eq 1 ]; then
+	    /bin/cat $file | $COMPSHELL > comp2 2>&1
+	    /usr/bin/diff comp1 comp2
+	fi
+    done
+fi

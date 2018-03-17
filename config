@@ -2,13 +2,13 @@
 
 TESTSHELL="$HOME/shell/a.out"   #where your shell is
 COMPSHELL="/bin/sh"	    #shell to compare to
+RESULTSDIR="$HOME/shellresults"  #directory to put output files in
 COMPARE=1		    #compare to compshell, 1 yes 0 no
+PATHENABLED=1		    #1 to use PATH, 0 to use which before piping
 
 #set these to 1 or 0 to do or not do these categories, respectively
 
 BASICCMDS=1   	   #commands without args
 ARGCMDS=1	   #commands with args
-PATH=1		   #commands using PATH(others do not use PATH unless specified)
-PATHARGCMDS=1	   #commands using PATH and args
 SEMICOLON=1	   #using the semicolon in line (not incl quotes)
 COMMENT=1	   #having comments in line

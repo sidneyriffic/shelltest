@@ -1,26 +1,48 @@
 #!/bin/bash
 source config
 
+if [ ! -a $RESULTSDIR ]; then
+   mkdir -p $RESULTSDIR
+fi
+
 if [ $BASICCMDS -eq 1 ]; then
-    for file in ./basiccmds/*
+    mkdir -p $RESULTSDIR/basiccmds
+    for file in basiccmds/*
     do
 	echo $file
-	/bin/cat $file | $TESTSHELL > comp1 2>&1
-	if [ $COMPARE -eq 1 ]; then
-	    /bin/cat $file | $COMPSHELL > comp2 2>&1
-	    /usr/bin/diff comp1 comp2
+	if [ $PATHENABLED -eq 1 ]; then
+	    `which cat` $file | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		`which cat` $file | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		`which diff` $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+	    fi
+	else
+	    which `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		which `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		`which diff` $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+	    fi
 	fi
     done
 fi
 
 if [ $ARGCMDS -eq 1 ]; then
-    for file in ./argcmds/*
+    mkdir -p $RESULTSDIR/argcmds
+    for file in argcmds/*
     do
 	echo $file
-	/bin/cat $file | $TESTSHELL > comp1 2>&1
-	if [ $COMPARE -eq 1 ]; then
-	    /bin/cat $file | $COMPSHELL > comp2 2>&1
-	    /usr/bin/diff comp1 comp2
+	if [ $PATHENABLED -eq 1 ]; then
+	    `which cat` $file | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		`which cat` $file | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		`which diff` $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+	    fi
+	else
+	    which `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		which `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		`which diff` $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+	    fi
 	fi
     done
 fi

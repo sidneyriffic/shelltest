@@ -18,7 +18,9 @@ on how much you have completed. Notably, you will want to disable PATHENABLED
 if you are not currently handling the PATH environmental variable.
 
 Command file format:
-Just a list of commands as if they were each a terminal input line.
+Just a list of commands as if they were each a terminal input line. If you add
+any, make sure it has at least a semi-descriptive filename for the case. If
+it's not clear what the case is, add a comment to the top of the case's file.
 
 Currently the plan is to have automated batch tests of all commands and
 many command combinations to make sure they all work, then automatically

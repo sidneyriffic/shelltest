@@ -1,9 +1,8 @@
 # shelltest
 Test cases for shell project
 
-NOTE: EXCESS WHITESPACE IN COMMANDS HAS NOT YET BEEN WELL TESTED WITH
-THE PATHLESS VERSION. CONVERSION WITH WITCH AND CUT MAY EAT THE WHITESPACE
-OR BREAK THE COMMAND.
+NOTE: Excess whitespace at the start of a line in a command file will break
+the PATHless version for the moment.
 
 Usage: ./testpipe
 

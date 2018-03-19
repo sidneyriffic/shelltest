@@ -13,13 +13,18 @@ files as they are run.
 Configuration:
 Edit config and set the path to your shell and the shell to compare against of
 your choice. Optionally, disable or enable various sections to test depending
-on how much you have completed. Notably, you will want to disable PATHENABLED
-if you are not currently handling the PATH environmental variable.
+on how much you have completed or want to focus on. Notably, you will want
+to disable PATHENABLED if you are not currently handling the PATH
+environmental variable.
+
+How to add cases to shell input checks:
+Just make a file with the list of input lines you want and stick it in an
+appropriate directory. There are two directories hooked up currently,
+basiccmds and argcmds. More will be forthcoming.
 
 Command file format:
 Just a list of commands as if they were each a terminal input line. If you add
-any, make sure it has at least a semi-descriptive filename for the case. If
-it's not clear what the case is, add a comment to the top of the case's file.
+any, make sure it has at least a semi-descriptive filename for the case. If the description is too complicated for a filename, then any lines beginning with a comment (#) should output before the diff is taken EXCEPT with the directory named "comments" so that lines beginning with comments are testable.
 
 Currently the plan is to have automated batch tests of all commands and
 many command combinations to make sure they all work, then automatically

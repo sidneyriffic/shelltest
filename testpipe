@@ -49,22 +49,22 @@ if [ $ARGCMDS -eq 1 ]; then
     done
 fi
 
-if [ $ARGCMDS -eq 1 ]; then
+if [ $COMMENTS -eq 1 ]; then
     mkdir -p $RESULTSDIR/comments
     for file in comments/*
     do
 	echo $file
 	cat $file | grep "^#"
 	if [ $PATHENABLED -eq 1 ]; then
-	    cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    cat $file | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 	    if [ $COMPARE -eq 1 ]; then
-		cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		cat $file | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
 		diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 	    fi
 	else
-	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 	    if [ $COMPARE -eq 1 ]; then
-		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
 		diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 	    fi
 	fi

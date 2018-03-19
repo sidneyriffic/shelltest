@@ -11,16 +11,16 @@ if [ $BASICCMDS -eq 1 ]; then
     do
 	echo $file
 	if [ $PATHENABLED -eq 1 ]; then
-	    `which cat` $file | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    cat $file | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 	    if [ $COMPARE -eq 1 ]; then
-		`which cat` $file | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
-		`which diff` $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		cat $file | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 	    fi
 	else
-	    which `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 	    if [ $COMPARE -eq 1 ]; then
-		which `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
-		`which diff` $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 	    fi
 	fi
     done
@@ -32,16 +32,16 @@ if [ $ARGCMDS -eq 1 ]; then
     do
 	echo $file
 	if [ $PATHENABLED -eq 1 ]; then
-	    `which cat` $file | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    cat $file | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 	    if [ $COMPARE -eq 1 ]; then
-		`which cat` $file | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
-		`which diff` $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		cat $file | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 	    fi
 	else
-	    which `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 	    if [ $COMPARE -eq 1 ]; then
-		which `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
-		`which diff` $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 	    fi
 	fi
     done

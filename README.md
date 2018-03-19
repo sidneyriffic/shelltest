@@ -19,12 +19,12 @@ environmental variable.
 
 How to add cases to shell input checks:
 Just make a file with the list of input lines you want and stick it in an
-appropriate directory. There are two directories hooked up currently,
-basiccmds and argcmds. More will be forthcoming.
+appropriate directory. There are three directories hooked up currently,
+basiccmds, argcmds and comments. More will be forthcoming.
 
 Command file format:
 Just a list of commands as if they were each a terminal input line. If you add
-any, make sure it has at least a semi-descriptive filename for the case. If the description is too complicated for a filename, then any lines beginning with a comment (#) should output before the diff is taken EXCEPT with the directory named "comments" so that lines beginning with comments are testable.
+any, make sure it has at least a semi-descriptive filename for the case. If the description is too complicated for a filename, then any lines beginning with a comment (#) should output before the diff is taken. Directories that are not comment testing will filter out lines that begin with comments before they are input to the shell.
 
 Currently the plan is to have automated batch tests of all commands and
 many command combinations to make sure they all work, then automatically

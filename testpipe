@@ -49,7 +49,7 @@ if [ $ARGCMDS -eq 1 ]; then
     done
 fi
 
-if [ $COMMENTS -eq 1 ]; then
+if [ $COMMENT -eq 1 ]; then
     mkdir -p $RESULTSDIR/comments
     for file in comments/*
     do

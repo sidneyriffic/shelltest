@@ -1,0 +1,5 @@
+ASDF=hello
+echo $ASDF
+echo $hel$ASDF
+echo "ASDF"
+echo $ASDFhel

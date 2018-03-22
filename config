@@ -12,3 +12,6 @@ BASICCMDS=1   	   #commands without args
 ARGCMDS=1	   #commands with args
 SEMICOLON=1	   #using the semicolon in line (not incl quotes)
 COMMENT=1	   #having comments in line
+
+
+TORTURE=0	   #the hardest most combinatory cases including everything

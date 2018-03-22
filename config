@@ -8,11 +8,12 @@ PATHENABLED=1		    #1 to use PATH, 0 to use which before piping
 
 #set these to 1 or 0 to do or not do these categories, respectively
 
-#mandatory (also PATH is mandatory)
+#mandatory (also PATH is mandatory), no special chars in cases
 BASICCMDS=1   	   #commands without args (includes exit and env builtins)
 ARGCMDS=1	   #commands with args (includes exit(status) advanced last)
 
-#advanced categories
+#advanced categories, no special chars in cases other than
+#"||", "&&", "$", "#" and ";" for their respective categories
 SETUNSETENV=1	   #set and unset environment
 CD=1		   #use the cd builtin
 ALIAS=1		   #alias builtin
@@ -22,7 +23,6 @@ LOGIC=1		   #logical && and || (advanced)
 SUBVARIABLES=1	   #substitution of shell/env vars (no funcs)
 SETVARIABLES=1	   #set local shell vars, may or may not be a requirement
 EVERYTHING=1	   #combinations of everything not extra curricular
-
 
 #extra curricular, not mandatory or advanced (probably)
 UNALIAS=0      	   #unalias things

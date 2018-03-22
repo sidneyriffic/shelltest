@@ -9,17 +9,17 @@ if [ $BASICCMDS -eq 1 ]; then
     mkdir -p $RESULTSDIR/basiccmds
     for file in basiccmds/*
     do
-	echo $file
-	cat $file | grep "^#"
+	echo -n $file
 	if [ $PATHENABLED -eq 1 ]; then
-	    cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 	    if [ $COMPARE -eq 1 ]; then
 		cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
 		    echo -e "[\033[32mOK\033[37m]"
 		else
 		    echo -e "[\033[31mKO\033[37m]"
 		fi
+		cat $file | grep "^#"
 		if [ $SHOWDIFF -eq 1 ]; then
 		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 		fi
@@ -33,6 +33,7 @@ if [ $BASICCMDS -eq 1 ]; then
 		else
 		    echo -e "[\033[31mKO\033[37m]"
 		fi
+		cat $file | grep "^#"
 		if [ $SHOWDIFF -eq 1 ]; then
 		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 		fi
@@ -50,8 +51,7 @@ if [ $ARGCMDS -eq 1 ]; then
     mkdir -p $RESULTSDIR/argcmds
     for file in argcmds/*
     do
-	echo $file
-	cat $file | grep "^#"
+	echo -n $file
 	if [ $PATHENABLED -eq 1 ]; then
 	    cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 	    if [ $COMPARE -eq 1 ]; then
@@ -61,6 +61,7 @@ if [ $ARGCMDS -eq 1 ]; then
 		else
 		    echo -e "[\033[31mKO\033[37m]"
 		fi
+		cat $file | grep "^#"
 		if [ $SHOWDIFF -eq 1 ]; then
 		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 		fi
@@ -74,6 +75,7 @@ if [ $ARGCMDS -eq 1 ]; then
 		else
 		    echo -e "[\033[31mKO\033[37m]"
 		fi
+		cat $file | grep "^#"
 		if [ $SHOWDIFF -eq 1 ]; then
 		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 		fi
@@ -91,8 +93,7 @@ if [ $COMMENT -eq 1 ]; then
     mkdir -p $RESULTSDIR/comments
     for file in comments/*
     do
-	echo $file
-	cat $file | grep "^#"
+	echo -n $file
 	if [ $PATHENABLED -eq 1 ]; then
 	    cat $file | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
 	    if [ $COMPARE -eq 1 ]; then
@@ -102,6 +103,7 @@ if [ $COMMENT -eq 1 ]; then
 		else
 		    echo -e "[\033[31mKO\033[37m]"
 		fi
+		cat $file | grep "^#"
 		if [ $SHOWDIFF -eq 1 ]; then
 		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 		fi
@@ -115,6 +117,7 @@ if [ $COMMENT -eq 1 ]; then
 		else
 		    echo -e "[\033[31mKO\033[37m]"
 		fi
+		cat $file | grep "^#"
 		if [ $SHOWDIFF -eq 1 ]; then
 		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
 		fi

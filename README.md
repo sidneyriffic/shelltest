@@ -4,6 +4,11 @@ Test cases for shell project
 NOTE: Excess whitespace at the start of a line in a command file will break
 the PATHless version for the moment.
 
+NOTE2: If you have a prompt output with piped input, the diff will see every
+line with your prompt as different from the shell you're mimicing since
+they do not output a prompt. Use isatty() to make your shell not output
+the prompt for better results.
+
 Usage: ./testpipe
 
 This will create a folder for test results indicated by the RESULTSDIR path,
@@ -24,7 +29,11 @@ basiccmds, argcmds and comments. More will be forthcoming.
 
 Command file format:
 Just a list of commands as if they were each a terminal input line. If you add
-any, make sure it has at least a semi-descriptive filename for the case. If the description is too complicated for a filename, then any lines beginning with a comment (#) should output before the diff is taken. Directories that are not comment testing will filter out lines that begin with comments before they are input to the shell.
+any, make sure it has at least a semi-descriptive filename for the case. If the
+description is too complicated for a filename, then any lines beginning with a
+comment (#) should output before the diff is taken. Directories that are not
+comment testing will filter out lines that begin with comments before they are
+input to the shell.
 
 Currently the plan is to have automated batch tests of all commands and
 many command combinations to make sure they all work, then automatically

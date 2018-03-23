@@ -1,0 +1,2 @@
+#space only to left of &&
+echo hello &&echo a second line

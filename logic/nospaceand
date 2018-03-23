@@ -1,0 +1,2 @@
+#no spaces before or after &&
+echo hello&&echo a second line

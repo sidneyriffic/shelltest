@@ -1,0 +1,2 @@
+#a comment symbol surrounded by excess spaces
+echo hello     # you should not see this

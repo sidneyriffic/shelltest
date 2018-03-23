@@ -1,0 +1,2 @@
+#no spaces before or after ||
+echo hello||echo shouldn't see this

@@ -1,0 +1,2 @@
+#space only to left of ||
+echo hi ||echo should not see this

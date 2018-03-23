@@ -1,0 +1,7 @@
+#tests to see if |& and |& do not translate to || and &&
+#This one might not technically be easy to mimic the shell, since | and &
+#are separately operators on their own
+#This case was put here specifically because it was a bug in ours
+#and it would be good to be aware of the possibility -Sidney
+echo hello |& echo hi
+echo hello &| echo hi

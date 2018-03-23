@@ -1,0 +1,9 @@
+#multiple lines to run with comments
+echo hello1, #you should not see this1
+echo hello2, #you should not see this2
+echo hello3, #you should not see this3
+echo hello4, #you should not see this4
+echo hello5, #you should not see this5
+echo hello6, #you should not see this6
+echo hello7, #you should not see this7
+echo hello8, #you should not see this8

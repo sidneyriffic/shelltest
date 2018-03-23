@@ -1,0 +1,2 @@
+#multiple comments in one line
+echo hello, # you #should #not # see # these

@@ -1,0 +1,3 @@
+#test basic && functionality
+echo true case && echo you should see this
+echo false case with bash error on next line && bash -c asdf && echo you should not see this

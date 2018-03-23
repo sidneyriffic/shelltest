@@ -1,0 +1,4 @@
+#combines many comment edge cases into one
+echo #hello#hi #hiya   #helo 
+#echo#hello hi #helo
+echo# hello # echo you should not #see this# echo whoops

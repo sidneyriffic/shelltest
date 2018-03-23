@@ -1,0 +1,2 @@
+#true && true || true
+echo true && echo after and || echo after or

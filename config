@@ -26,6 +26,7 @@ SETVARIABLES=1	   #set local shell vars, may or may not be a requirement
 EVERYTHING=1	   #combinations of everything not extra curricular
 
 #extra curricular, not mandatory or advanced (probably)
+SETTEMPENV=0	   #set temp environment w/leading NAME=VAL before command (maybe adv)
 UNALIAS=0      	   #unalias things
 QUOTES=0	   #single and double quotes, mismatches at end
 ESCAPES=0	   #backslash escapes

@@ -1,0 +1,3 @@
+#test comment trailing a word
+#this should not start the comment
+echo hello# you should see this text

@@ -1,0 +1,2 @@
+#a long logic string
+echo hi && echo hello && false && echo hiya && false || echo howdy && echo helo && false || false || false || false && echo shouldn't see this && shouldn't see this either || echo you made it && false || echo rip

@@ -1,2 +1,2 @@
 #true || false && true
-echo true || false && echo should not print
+echo hello || false && echo hiya

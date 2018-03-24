@@ -1,0 +1,4 @@
+#cd to / then bin then do pwd
+cd /
+cd bin
+pwd

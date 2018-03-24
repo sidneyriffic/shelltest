@@ -1,2 +1,2 @@
 #false && true || true
-false && echo won't see this || echo after or
+false && echo wont see this || echo after or

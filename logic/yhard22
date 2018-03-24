@@ -1,2 +1,2 @@
 #a long logic string with erratic spacing
-echo hi       && echo hello&& false&&echo hiya    &&false    ||echo howdy    &&echo helo&& false    ||false||false||false&&echo shouldn't see this      &&        shouldn't see this either        ||   echo you made it       &&false||      echo rip
+echo hi       && echo hello&& false&&echo hiya    &&false    ||echo howdy    &&echo helo&& false    ||false||false||false&&echo shouldnt see this      &&        shouldnt see this either        ||   echo you made it       &&false||      echo rip

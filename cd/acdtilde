@@ -1,0 +1,3 @@
+#cd to home using tilde
+cd ~
+pwd

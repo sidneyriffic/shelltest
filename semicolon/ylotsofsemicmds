@@ -1,0 +1,2 @@
+#a lot of commands separated by semicolons with varying spaces
+echo                       hi;   echo        hello;echo     hiya;    echo   bonjour     ;         echo bienvenue      ;echo    welcome

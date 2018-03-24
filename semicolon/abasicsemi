@@ -1,0 +1,2 @@
+#two echos separates by a ;
+echo hi ; echo hello

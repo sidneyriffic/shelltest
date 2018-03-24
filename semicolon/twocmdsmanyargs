@@ -1,0 +1,2 @@
+#two semicolon separated commands with many arguments
+echo ls echo man 3 asdf ; echo ls pwd pwd pwd

@@ -1,0 +1,2 @@
+#two commands separated with two semicolons
+echo hello ;; echo hi

@@ -1,0 +1,2 @@
+#space only on left side of semicolon
+echo hello ;echo hi

@@ -145,3 +145,191 @@ if [ $COMMENT -eq 1 ]; then
 	fi
     done
 fi
+
+if [ $SEMICOLON -eq 1 ]; then
+    mkdir -p $RESULTSDIR/semicolon
+    for file in semicolon/*
+    do
+	if [ $COMPARE -eq 0 ]; then
+	    cat $file | grep "^#"
+	    echo $file
+	else
+	    echo -n $file
+	fi
+	if [ $PATHENABLED -eq 1 ]; then
+	    cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	else
+	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	fi
+	echo ----------------------------------------------------
+	if [ $SHOWDIFF -eq 1 ]; then
+	    echo ====================================================
+	    echo ----------------------------------------------------
+	fi
+    done
+fi
+
+if [ $LOGIC -eq 1 ]; then
+    mkdir -p $RESULTSDIR/logic
+    for file in logic/*
+    do
+	if [ $COMPARE -eq 0 ]; then
+	    cat $file | grep "^#"
+	    echo $file
+	else
+	    echo -n $file
+	fi
+	if [ $PATHENABLED -eq 1 ]; then
+	    cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	else
+	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	fi
+	echo ----------------------------------------------------
+	if [ $SHOWDIFF -eq 1 ]; then
+	    echo ====================================================
+	    echo ----------------------------------------------------
+	fi
+    done
+fi
+
+if [ $SUBVARIABLES -eq 1 ]; then
+    mkdir -p $RESULTSDIR/subvars
+    for file in subvars/*
+    do
+	if [ $COMPARE -eq 0 ]; then
+	    cat $file | grep "^#"
+	    echo $file
+	else
+	    echo -n $file
+	fi
+	if [ $PATHENABLED -eq 1 ]; then
+	    cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	else
+	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	fi
+	echo ----------------------------------------------------
+	if [ $SHOWDIFF -eq 1 ]; then
+	    echo ====================================================
+	    echo ----------------------------------------------------
+	fi
+    done
+fi
+
+if [ $CD -eq 1 ]; then
+    mkdir -p $RESULTSDIR/cd
+    for file in cd/*
+    do
+	if [ $COMPARE -eq 0 ]; then
+	    cat $file | grep "^#"
+	    echo $file
+	else
+	    echo -n $file
+	fi
+	if [ $PATHENABLED -eq 1 ]; then
+	    cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	else
+	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    if [ $COMPARE -eq 1 ]; then
+		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	fi
+	echo ----------------------------------------------------
+	if [ $SHOWDIFF -eq 1 ]; then
+	    echo ====================================================
+	    echo ----------------------------------------------------
+	fi
+    done
+fi

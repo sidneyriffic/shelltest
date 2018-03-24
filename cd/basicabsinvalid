@@ -1,0 +1,3 @@
+#invalid absolute path
+cd /asdfhbausdigfbiausdbgfiuasdf
+pwd

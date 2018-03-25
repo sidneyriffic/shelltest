@@ -7,6 +7,9 @@ RESULTSDIR="$HOME/shellresults"  #directory to put output files in,
 COMPARE=1		    #compare to compshell, 1 yes 0 no
 PATHENABLED=1		    #1 to use PATH, 0 to use which before piping
 SHOWDIFF=1		    #show diff after result or not. 1 to show, 0 to hide
+DOVALGRIND=1		    #do valgrind or not. This takes significantly longer
+SHOWGRIND=1		    #show valgrind errors during check. Valgrind
+			    #output file made regardless if DOVALGRIND==1
 
 #set these to 1 or 0 to do or not do these categories, respectively
 

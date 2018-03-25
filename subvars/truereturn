@@ -1,0 +1,3 @@
+#echo a true return
+true
+echo $?

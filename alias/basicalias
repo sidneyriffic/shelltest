@@ -1,0 +1,3 @@
+#set alias pdwalias=pwd then run it
+alias pwdalias=pwd
+pwdalias

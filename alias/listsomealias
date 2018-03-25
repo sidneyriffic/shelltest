@@ -1,0 +1,3 @@
+#set some aliases, then list some of them
+alias pwdalias=pwd lsalias=ls invalidalias=asdfasdf clearalias=clear
+alias pwdalias invalidalias asdfbaiusodbgasdg clearalias

@@ -1,0 +1,4 @@
+#alias 2 things in one line then try to run them
+alias pwdalias=pwd lsalias=ls
+pwdalias
+lsalias -a -l /usr

@@ -1,0 +1,6 @@
+#make some aliases then list all aliases using just alias
+alias pwdalias=pwd
+alias lsalias=ls
+alias invalidalias=asdfasdfasdf
+alias clearalias=clear
+alias

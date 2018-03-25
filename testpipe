@@ -173,17 +173,17 @@ if [ $EXIT -eq 1 ]; then
 	    echo -n $file
 	fi
 	if [ $PATHENABLED -eq 1 ]; then
-	    cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+	    cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    echo $? >> $RESULTSDIR/$file\test
 	    if [ $? -gt 127 ]; then
 		echo "Segfault or core dump error (exit > 127)" >> $RESULTSDIR/$file\test
 	    fi
-	    echo $? >> $RESULTSDIR/$file\comp
 	    if [ $DOVALGRIND -eq 1 ]; then
 		cat $file | grep -v "^#" | $VALGRINDIT$RESULTSDIR/$file\valgrind $TESTSHELL > /dev/null 2>&1
 	    fi
 	    if [ $COMPARE -eq 1 ]; then
-		cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
-		echo $? >> $RESULTSDIR/$file\test
+		cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		echo $? >> $RESULTSDIR/$file\comp
 		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
 		    echo -e "[\033[32mOK\033[37m]"
 		else

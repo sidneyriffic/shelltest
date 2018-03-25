@@ -112,9 +112,9 @@ if [ $EXIT -eq 1 ]; then
 	if [ $PATHENABLED -eq 1 ]; then
 	    if [ $COMPARE -eq 1 ]; then
 		cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
-		echo $?
+		echo $? >> $RESULTSDIR/$file\comp
 		cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
-		echo $?
+		echo $? >> $RESULTSDIR/$file\test
 		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
 		    echo -e "[\033[32mOK\033[37m]"
 		else
@@ -127,10 +127,10 @@ if [ $EXIT -eq 1 ]; then
 	    fi
 	else
 	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
-	    echo $?
+	    echo $? >> $RESULTSDIR/$file\comp
 	    if [ $COMPARE -eq 1 ]; then
 		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
-		echo $?
+		echo $? >> $RESULTSDIR/$file\comp
 		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
 		    echo -e "[\033[32mOK\033[37m]"
 		else

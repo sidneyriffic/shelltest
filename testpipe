@@ -99,6 +99,57 @@ if [ $ARGCMDS -eq 1 ]; then
     done
 fi
 
+if [ $EXIT -eq 1 ]; then
+    mkdir -p $RESULTSDIR/exit
+    for file in exit/*
+    do
+	if [ $COMPARE -eq 0 ]; then
+	    cat $file | grep "^#"
+	    echo $file
+	else
+	    echo -n $file
+	fi
+	if [ $PATHENABLED -eq 1 ]; then
+	    if [ $COMPARE -eq 1 ]; then
+		cat $file | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		echo $?
+		cat $file | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+		echo $?
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	else
+	    `cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $TESTSHELL > $RESULTSDIR/$file\test 2>&1
+	    echo $?
+	    if [ $COMPARE -eq 1 ]; then
+		`cat $file | cut -f 1` | paste -d ' ' - $file | cut -f 1,3- -d ' ' | grep -v "^#" | $COMPSHELL > $RESULTSDIR/$file\comp 2>&1
+		echo $?
+		if cmp -s $RESULTSDIR/$file\test $RESULTSDIR/$file\comp; then
+		    echo -e "[\033[32mOK\033[37m]"
+		else
+		    echo -e "[\033[31mKO\033[37m]"
+		fi
+		cat $file | grep "^#"
+		if [ $SHOWDIFF -eq 1 ]; then
+		    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+		fi
+	    fi
+	fi
+	echo ----------------------------------------------------
+	if [ $SHOWDIFF -eq 1 ]; then
+	    echo ====================================================
+	    echo ----------------------------------------------------
+	fi
+    done
+fi
+
 if [ $COMMENT -eq 1 ]; then
     mkdir -p $RESULTSDIR/comments
     for file in comments/*

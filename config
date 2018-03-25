@@ -2,7 +2,8 @@
 
 TESTSHELL="$HOME/shell/a.out"   #where your shell is
 COMPSHELL="/bin/sh"	    #shell to compare to
-RESULTSDIR="$HOME/shellresults"  #directory to put output files in
+RESULTSDIR="$HOME/shellresults"  #directory to put output files in,
+				 #set outside tester folder
 COMPARE=1		    #compare to compshell, 1 yes 0 no
 PATHENABLED=1		    #1 to use PATH, 0 to use which before piping
 SHOWDIFF=1		    #show diff after result or not. 1 to show, 0 to hide
@@ -10,8 +11,9 @@ SHOWDIFF=1		    #show diff after result or not. 1 to show, 0 to hide
 #set these to 1 or 0 to do or not do these categories, respectively
 
 #mandatory (also PATH is mandatory), no special chars in cases
-BASICCMDS=1   	   #commands without args (includes env and exit builtins last)
-ARGCMDS=1	   #commands with args (includes exit(status) advanced last)
+BASICCMDS=1   	   #commands without args (includes env)
+ARGCMDS=1	   #commands with args
+EXIT=1		   #exit tests (special check on return value)
 
 #advanced categories, no special chars in cases other than
 #"||", "&&", "$", "#" and ";" for their respective categories
@@ -27,7 +29,8 @@ EVERYTHING=1	   #combinations of everything not extra curricular
 
 #extra curricular, not mandatory or advanced (probably)
 CDEXTRA=0	   #use the cd builtin with ~, . and .. (maybe adv)
-SETTEMPENV=0	   #set temp environment w/leading NAME=VAL before command (maybe adv)
+SETTEMPENV=0	   #set temp environment w/leading NAME=VAL before
+		   #command (maybe adv)
 UNALIAS=0      	   #unalias things
 QUOTES=0	   #single and double quotes, mismatches at end
 ESCAPES=0	   #backslash escapes

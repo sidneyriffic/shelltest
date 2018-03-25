@@ -1,0 +1,5 @@
+#cd somewhere then do cd -
+cd /bin
+cd /usr/bin
+cd -
+pwd

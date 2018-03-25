@@ -1,0 +1,9 @@
+#test cd with lots of excess slashes
+cd /////////
+cd ////bin//////
+pwd
+cd ///////////
+cd usr///////bin//////
+pwd
+cd /////////
+cd //////usr//////bin/////

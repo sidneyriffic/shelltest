@@ -1,0 +1,4 @@
+#cd / then /usrbin
+cd /
+cd usr/bin
+pwd

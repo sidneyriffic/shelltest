@@ -1,4 +1,5 @@
 #cd to / then bin then do pwd
 cd /
+cd usr
 cd bin
 pwd

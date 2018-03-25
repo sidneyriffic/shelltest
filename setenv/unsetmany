@@ -1,4 +1,5 @@
-#set with setenv one then unset many times
+#set with setenv once then unset many times
+#diff output should be empty
 setenv ASDF hello
 unsetenv ASDF
 unsetenv ASDF
@@ -15,5 +16,4 @@ unsetenv ASDF
 unsetenv ASDF
 unsetenv ASDF
 unsetenv ASDF
-echo only see this
-echo $ASDF
+env

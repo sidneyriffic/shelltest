@@ -1,6 +1,5 @@
 #set a var with setenv then unsetenv then echo
-#output should be "only see this" and an extra newline
+#diff output should be empty
 setenv ASDF hello
 unsetenv ASDF
-echo only see this
-echo hello
+env

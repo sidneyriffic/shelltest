@@ -1,6 +1,7 @@
 #set 3 var, unset the second one, echo them all
-#output should be "hello  world"
+#diff output should be "ASDF=hello" and "QWER=world"
 setenv ASDF hello
 setenv FDSA skip
 setenv QWER world
-echo $ASDF $FDSA $QWER
+unset FDSA
+env

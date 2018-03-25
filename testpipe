@@ -141,7 +141,10 @@ if [ $SETUNSETENV -eq 1 ]; then
 	if [ $DOVALGRIND -eq 1 ]; then
 	    cat $file | grep -v "^#" | $VALGRINDIT$RESULTSDIR/$file\valgrind $TESTSHELL > /dev/null 2>&1
 	fi
-	cat $RESULTSDIR/$file\test
+	echo env | $TESTSHELL > $RESULTSDIR/$file\comp 2>&1
+	if [ $SHOWDIFF -eq 1 ]; then
+	    diff $RESULTSDIR/$file\test $RESULTSDIR/$file\comp
+	fi
 	if [ $SHOWGRIND -eq 1 ]; then
 	    cat $RESULTSDIR/$file\valgrind
 	fi
@@ -151,7 +154,7 @@ fi
 
 if [ $SETUNSETENV -eq 1 ]; then
     echo "zcheckenvpass"
-    echo "#Checking if environment is passed"
+    echo "#Checking if environment is passed by calling bash"
     echo "#This should echo ASDF=hello if successful."
     echo "setenv ASDF hello
 bash -c env" | $TESTSHELL | grep "^ASDF" > $RESULTSDIR/setenv/zcheckenvpass 2>&1

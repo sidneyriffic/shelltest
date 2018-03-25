@@ -1,4 +1,4 @@
 #set an env var with setenv then echo it
-#output should be "hello"
+#diff output should be "ASDF=hello"
 setenv ASDF hello
-echo $ASDF
+env

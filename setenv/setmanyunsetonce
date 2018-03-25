@@ -1,5 +1,5 @@
 #set same var many times with setenv then unset once
-#output should be "only see this" with an extra newline
+#diff output should be empty
 setenv ASDF hello
 setenv ASDF hello
 setenv ASDF hello
@@ -27,5 +27,4 @@ setenv ASDF hello
 setenv ASDF hello
 setenv ASDF hello
 unsetenv ASDF
-echo only see this
-echo $ASDF
+env

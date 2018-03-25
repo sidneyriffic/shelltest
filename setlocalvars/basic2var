@@ -1,0 +1,4 @@
+#ASDF=hello then FDSA=world then echo $ASDF $FDSA
+ASDF=hello
+FDSA=world
+echo $ASDF $FDSA

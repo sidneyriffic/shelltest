@@ -1,0 +1,5 @@
+#Var setting with = before a command should set temp env.
+#Use "VARNAME=hello bash -c 'echo $VARNAME'" to check that
+#this is the case and it's not just shell local. Currently
+#I can't think of a way to implement this without quotes,
+#so there's just this note here until then. -Sidney

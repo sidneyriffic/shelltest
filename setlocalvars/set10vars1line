@@ -1,0 +1,4 @@
+#set a lot of variables in one line then echo them all
+ASDF=hello FDSA=world QWER=goodbye REWQ=world ZXCV=it VCXZ=was QWAS=nice SAWQ=knowing ZXAS=you QWERT=.
+echo $ASDF $FDSA $QWER $REWQ $ZXCV $VCXZ $QWAS $SAWQ $ZXAS $QWERT
+

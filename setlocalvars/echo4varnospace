@@ -1,0 +1,6 @@
+#set 4 vars then echo them all with no spaces
+ASDF=hello
+FSDA=world
+QWER=goodbye
+REWQ=world
+echo $ASDF$FDSA$QWER$REWQ

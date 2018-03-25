@@ -1,0 +1,5 @@
+#Set some shell local variables then make sure they aren't passed
+#with the environment (Some vars may differ, but the one we're looking
+#for is ASDFFDSA. If it shows up in diff, something went wrong.)
+ASDFFDSA=hello
+bash -c env

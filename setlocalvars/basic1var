@@ -1,0 +1,3 @@
+#ASDF=hello then echo $ASDF
+ASDF=hello
+echo $ASDF

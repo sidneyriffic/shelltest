@@ -1,0 +1,2 @@
+#set some variables then echo them in one line
+ASDF=hello FDSA=world echo $ASDF $FDSA

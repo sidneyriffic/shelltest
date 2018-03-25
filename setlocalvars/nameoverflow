@@ -1,0 +1,3 @@
+#set a variable, then test the var name in overflow with extra letters
+ASDF=hello
+echo $ASDFWQER

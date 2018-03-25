@@ -1,0 +1,2 @@
+#set some vars, then echo, then echo an equal then the var name it would be
+ASDF=hello FDSA=world echo $ASDF QWER=dontprint $FDSA $QWER

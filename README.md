@@ -9,6 +9,8 @@ line with your prompt as different from the shell you're mimicing since
 they do not output a prompt. Use isatty() to make your shell not output
 the prompt for better results.
 
+NOTE3: Some files have proper emtpy line endings and some do not, and which one each case is is mixed rather than doing everything twice for both of those cases. So different things might happen depending on which you get.
+
 Usage: ./testpipe
 
 This will create a folder for test results indicated by the RESULTSDIR path,

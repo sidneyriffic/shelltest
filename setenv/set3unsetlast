@@ -1,0 +1,6 @@
+#set 3 vars with setenv, then unset the last, then echo all
+#output should be "hello world -"
+setenv ASDF hello
+setenv FDSA world
+setenv QWER skip
+echo $ASDF $FDSA $QWER -

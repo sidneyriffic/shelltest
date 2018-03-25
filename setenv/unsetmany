@@ -1,0 +1,19 @@
+#set with setenv one then unset many times
+setenv ASDF hello
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+unsetenv ASDF
+echo only see this
+echo $ASDF

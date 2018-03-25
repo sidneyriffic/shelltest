@@ -1,0 +1,7 @@
+#set some env vars then echo them with no space
+#output should be "helloworldgoodbyeworld"
+setenv ASDF hello
+setenv FDSA world
+setenv QWER goodbye
+setenv REWQ world
+echo $ASDF$FDSA$QWER$REWQ

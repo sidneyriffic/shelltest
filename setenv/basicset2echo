@@ -1,0 +1,5 @@
+#set 2 env vars with setenv then echo them at the same time
+#output should be "hello hello"
+setenv ASDF hello
+setenv FDSA hello
+echo $ASDF $FDSA

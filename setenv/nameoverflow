@@ -1,0 +1,6 @@
+#set an envvar with setenv then echo a varname with extra characters
+#output should be "should only see this line" and an extra newline
+setenv ASDF hello
+setenv FDSA world
+echo should only see this line
+echo $ASDFFDSA

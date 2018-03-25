@@ -1,0 +1,4 @@
+#set an env var with setenv then use it as a command name
+#output should be "hello"
+setenv ASDF echo
+$ASDF hello

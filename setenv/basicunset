@@ -1,0 +1,6 @@
+#set a var with setenv then unsetenv then echo
+#output should be "only see this" and an extra newline
+setenv ASDF hello
+unsetenv ASDF
+echo only see this
+echo hello

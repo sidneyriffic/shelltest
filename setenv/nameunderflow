@@ -1,0 +1,5 @@
+#set an env var with setenv then echo it with letters trimmed off
+#output should be "you can only see this line" with an extra newline
+setenv ASDFFDSA hello
+echo you can only see this line
+echo $ASDFFDS

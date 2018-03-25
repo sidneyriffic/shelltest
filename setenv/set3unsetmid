@@ -1,4 +1,4 @@
-#set 3 var, unset the second one, echo them all
+#set 3 var, unset the second one
 #diff output should be "ASDF=hello" and "QWER=world"
 setenv ASDF hello
 setenv FDSA skip

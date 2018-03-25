@@ -1,4 +1,4 @@
-#set a var with setenv then unsetenv then echo
+#set a var with setenv then unsetenv
 #diff output should be empty
 setenv ASDF hello
 unsetenv ASDF

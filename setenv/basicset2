@@ -1,4 +1,4 @@
-#set 2 env vars with setenv then echo them at the same time
+#set 2 env vars with setenv
 #diff output should be "ASDF=hello" and "FDSA=hello"
 setenv ASDF hello
 setenv FDSA hello

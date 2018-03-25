@@ -1,4 +1,4 @@
-#set 3 vars with setenv, then unset the last, then echo all
+#set 3 vars with setenv, then unset the last
 #diff output should be "ASDF=hello" and "FDSA=world"
 setenv ASDF hello
 setenv FDSA world

@@ -1,14 +1,13 @@
-#sub $$ $? and $PWD many times in multiple lines
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
-echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+#sub $? and $PWD many times in multiple lines
+false
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD
+echo $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD $? $PWD

@@ -1,0 +1,14 @@
+#sub $$ $? and $PWD many times in multiple lines
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD

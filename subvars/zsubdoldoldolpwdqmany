@@ -1,0 +1,2 @@
+#sub $$ $? and $PWD many times in a line
+echo $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD $$ $? $PWD

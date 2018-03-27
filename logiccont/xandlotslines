@@ -1,0 +1,11 @@
+#and over lots of lines
+echo hello &&
+echo hi &&
+echo hiya &&
+true &&
+echo next is false &&
+false &&
+false &&
+echo nope not this one &&
+echo not this one either &&
+echo definitely not

@@ -3,5 +3,5 @@
 setenv ASDF hello
 setenv FDSA skip
 setenv QWER world
-unset FDSA
+unsetenv FDSA
 env

@@ -26,6 +26,7 @@ ALIAS=1		   #alias builtin
 SEMICOLON=1	   #using the semicolon in line
 COMMENT=1	   #having comments in line
 LOGIC=1		   #logical && and ||
+LOGICCONT=1	   #continuation of logic operators to second line
 SUBVARIABLES=1	   #substitution of shell/env vars (no funcs)
 SETVARIABLES=1	   #set local shell vars, may or may not be a requirement
 EVERYTHING=1	   #combinations of everything not extra curricular

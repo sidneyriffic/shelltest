@@ -1,0 +1,14 @@
+#echo first line && false && newlines with spaces echo second line
+echo first line && false &&
+
+
+
+
+
+
+
+
+
+
+
+echo second line should not be seen

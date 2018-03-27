@@ -1,0 +1,3 @@
+# first || newline second
+echo first line ||
+echo should not see second line

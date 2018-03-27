@@ -1,0 +1,10 @@
+#echo first && false && newline newline newline newlin echo second
+echo first line && false &&
+
+
+
+
+
+
+
+echo second line you should not see

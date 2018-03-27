@@ -1,0 +1,3 @@
+#echo first && false && spaces newline echo second
+echo first line && false &&
+echo second line should not be seen

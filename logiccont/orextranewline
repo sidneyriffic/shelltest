@@ -1,0 +1,8 @@
+#echo first line || newline newline newline newline echo second
+echo first line ||
+
+
+
+
+
+echo second line

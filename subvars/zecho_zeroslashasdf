@@ -1,0 +1,2 @@
+#this might not be checked since it involves escaping
+echo $0\ASDF

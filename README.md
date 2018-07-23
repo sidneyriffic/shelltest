@@ -53,3 +53,7 @@ N) Extensive testing of builtins individually, one for each
 
 Additionally, there will likely be tests for individual library style
 functions added here as well at some point.
+
+**Authors:**
+Sidney Burkett  
+Gregory Dame

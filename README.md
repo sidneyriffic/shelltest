@@ -17,19 +17,19 @@ This will create a folder for test results indicated by the RESULTSDIR path,
 as well as subdirectories to store the individual output from all the test
 files as they are run.
 
-Configuration:
+**Configuration:**  
 Edit config and set the path to your shell and the shell to compare against of
 your choice. Optionally, disable or enable various sections to test depending
 on how much you have completed or want to focus on. Notably, you will want
 to disable PATHENABLED if you are not currently handling the PATH
 environmental variable.
 
-How to add cases to shell input checks:
+**How to add cases to shell input checks:**  
 Just make a file with the list of input lines you want and stick it in an
 appropriate directory. There are three directories hooked up currently,
 basiccmds, argcmds and comments. More will be forthcoming.
 
-Command file format:
+**Command file format:**  
 Just a list of commands as if they were each a terminal input line. If you add
 any, make sure it has at least a semi-descriptive filename for the case. If the
 description is too complicated for a filename, then any lines beginning with a
